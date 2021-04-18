@@ -1,0 +1,124 @@
+div#Dplayer_C {
+    width: 100%;
+}
+ul.num_C{
+    flex-wrap: wrap;
+    width: 100%;
+}
+ul.num_C li.list_C{
+    list-style: none;
+    padding: 5px;
+    -webkit-box-flex: 0;
+    flex: 0 0 10%;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.num_C li.list_C span{
+    background-color: #fff;
+    border: 1px solid #e5e9ef;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    color: #99a2aa;
+}
+ul.num_C li.list_C span:hover{
+    background: #00bcd4;
+    color:#fff;
+}
+#Dplayer_C .video_C {
+    width: 100%;
+    height: 0;
+    margin: 10px 0;
+    padding-bottom: 50%;
+    position: relative;
+    display: block;
+}
+.video_C .video_player {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+}
+.video_player iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#dplayer {
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 950px){
+    ul.num_C li.list_C{
+        flex: 0 0 25%;
+        max-width: 21.5%;
+    }
+    .dplayer-logo{display: none;}
+}
+.danmu-head {
+    border-bottom: 1px solid #dcdcdc;
+    height: 5%;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+}
+.danmu-menu {
+    height: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dcdcdc;
+}
+.danmu-menu div {
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    text-align: center;
+    padding: 0 5px;
+}
+.danmu-body {
+    height: 90%;
+    overflow: auto;
+}
+.danmu-body li {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.danmu-body span {
+    cursor: pointer;
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+.danmu-body span:hover {
+    color: #f16b6b;
+}
+/*滚动条*/
+.danmu-body::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+.danmu-body::-webkit-scrollbar-track {
+    background: #fff0;
+}
+.danmu-body::-webkit-scrollbar-thumb {
+    background: #a2a2a2;
+    border-radius: 20px;
+}
+.danmu-body::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}

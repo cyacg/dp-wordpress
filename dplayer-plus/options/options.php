@@ -2,9 +2,9 @@
 /*后台配置 */
 add_action('admin_menu', 'DplayerMenu');
 function DplayerMenu(){
-    add_menu_page('Dplayer设置', '贴吧视频Dplayer配置', 'administrator', 'DplayerOptions', 'DplayerOptions', '', 80);//标题,名字,权限,别名,执行函数,图标url地址,位置
+    add_menu_page('Dplayer设置', 'Dplayer配置', 'administrator', 'DplayerOptions', 'DplayerOptions', '', 80);//标题,名字,权限,别名,执行函数,图标url地址,位置
 }
-function DplayerOptions2(){
+function DplayerOptions(){
     wp_enqueue_script('DplayerOptions', plugins_url('',__FILE__)."/DplayerOptions.js", array(), '1.0', true);    //引用js文件
     $_nonce_C = wp_create_nonce('DplayerOptions_nonce');
     /*数据存储 */
@@ -65,7 +65,7 @@ function DplayerOptions2(){
             'menu'          =>  $video_menu,
             'parsers'       =>  $video_parsers,
         );
-        update_option('CarVideo', $video_sql );   //存储sql
+        update_option('CarVideo2', $video_sql );   //存储sql
      //   echo '<script>location.reload();</script>';  //刷新
     }
     /*页面数据输出 */
@@ -283,7 +283,7 @@ function DplayerOptions2(){
 }
 /*编辑器插入短代码*/
 add_action('after_wp_tiny_mce', 'Videomce');      
-function Videomce2() {
+function Videomce() {
 ?>
     <script type="text/javascript">  
     QTags.addButton('Dplayer','插入贴吧视频播放器','[dp url="" name="" ]',''); 

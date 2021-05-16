@@ -65,7 +65,7 @@ function DplayerOptions(){
             'menu'          =>  $video_menu,
             'parsers'       =>  $video_parsers,
         );
-        update_option('CarVideo2', $video_sql );   //存储sql
+        update_option('CarVideo', $video_sql );   //存储sql
      //   echo '<script>location.reload();</script>';  //刷新
     }
     /*页面数据输出 */
